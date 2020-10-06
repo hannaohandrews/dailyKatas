@@ -1,4 +1,4 @@
-let object = {};
+let newObject = {};
 let newArray = [];
 let string = "";
 
@@ -7,9 +7,9 @@ const urlDecode = function (text) {
     if (text[j] === "%" || text[j] === "2" || text[j] === "0") {
       string += " ";
     } else {
-        string += text[j]
+      string += text[j];
     }
-  } 
+  }
 
   let array = string.split("&");
 
@@ -21,11 +21,20 @@ const urlDecode = function (text) {
     }
   });
 
-  return newArray;
-
-  
+  newArray.forEach((pair) => {
+    let key = pair[0];
+    let value = pair[1];
+    newObject[key] = value;
+  });
+  return newObject;
 };
 
-// console.log(urlDecode("duck=rubber"));
-// console.log(urlDecode("bootcamp=Lighthouse%20Labs"));
+console.log(urlDecode("duck=rubber"));
+console.log(urlDecode("bootcamp=Lighthouse%20Labs"));
 console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain"));
+console.log(urlDecode("city=Vancouver&weather=lots%20of%20rain").weather);
+
+// {duck: "rubber"}
+// {bootcamp: "Lighthouse Labs"}
+// {city: "Vancouver", weather: "lots of rain"}
+// "lots of rain"
