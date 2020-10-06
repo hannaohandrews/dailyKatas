@@ -33,9 +33,9 @@ var romanToInt = function (s) {
       result += 1000;
     }
   }
-
   return result;
 };
+
 
 // console.log(romanToInt("IV"))
 console.log(romanToInt("MCMXCIV"));
