@@ -7,6 +7,7 @@ let anagramFilter = (item) => {
   for (let i = 0; i < item.length; i++) {
     sortedWords.push(item[i].split("").sort().join(""));
   }
+  
   let firstWord = sortedWords[0];
   let secondWord = sortedWords[1];
 
