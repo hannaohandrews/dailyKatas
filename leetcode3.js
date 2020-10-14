@@ -8,22 +8,26 @@
 //  * @return {number}
 //  */
 
-let counter = 0 
-let arraySplit = []
-let arrayNums= []
-let finalAns= 0
+let consecutive = 0;
+let currentConsecutive = 0;
 
-var findMaxConsecutiveOnes = function(nums) {
-        arraySplit = nums.split(',')
-    console.log(arrarySplit)
+const pattern = (arr) => {
     
-    for(let i = 0 ; i < nums.length; i++){
-        if(nums[i]===1){
-            counter+=1
-        }else if (nums[i]===0){
-            arrayNums.push(counter)
+    for (const number of arr ) {
+      if (number === 1 ) {currentConsecutive++}
+      else {
+        if (consecutive < currentConsecutive) {
+          consecutive = currentConsecutive;
+          currentConsecutive = 0;
         }
-    } return arrayNums
-};
-
-console.log(findMaxConsecutiveOnes([1,1,0,1,1,1]))
+      }
+    }
+      if (consecutive < currentConsecutive) {
+        consecutive = currentConsecutive;
+        currentConsecutive = 0;
+      }
+    
+    return consecutive;
+  }
+  ​
+  console.log(pattern([1,1,0,1,1,1]))
