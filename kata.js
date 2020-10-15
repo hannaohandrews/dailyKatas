@@ -1,4 +1,7 @@
-let selectedColors = ['red','blue']
-selectedColors[2] = 'green'
+let a = 'red';
+let b = 'blue';
 
-console.log(selectedColors)
+
+
+console.log(a)
+console.log(b)
