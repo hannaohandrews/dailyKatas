@@ -4,7 +4,7 @@ console.log(numbers);
 
 function arrayFromRange(min, max) {
   const array = [];
-  for (let i = -10; i <= -4; i++) {
+  for (let i = min; i <= max; i++) {
     array.push(i);
   }
   return array;
