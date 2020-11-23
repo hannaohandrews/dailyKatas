@@ -9,6 +9,7 @@ numbers.unshift(1, 2);
 //ADD at Middle
 numbers.splice(2, 1, "a", "b");
 
+//.includes
 console.log(numbers.includes(1)); //true
 
 const courses = [
