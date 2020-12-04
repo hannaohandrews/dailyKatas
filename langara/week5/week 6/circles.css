@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(26, 112, 15);
+}
+
+/*  .abc     class
+/*  #abc     id of abc
+/*  p        paragraph tag
+/*  div      div tag */
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: #dae640;
+  color: rgb(203, 101, 101);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  border-radius: 50%;
+  border:3px solid gray;
+  text-align: center;
+  line-height:200px;
+  position: absolute;
+}
