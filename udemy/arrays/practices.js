@@ -44,6 +44,7 @@ const filtered = numbers
 
 console.log(filtered);
 
+////////////////////////////////////////////////
 //// REDUCE/////
 const array = [1,6, -1,-2];
 
@@ -51,12 +52,18 @@ const array = [1,6, -1,-2];
 // for (let n of numbers)
 //     sum += n; 
 
-const sum = array.reduce((accum, current)=>{
-    return accum + current
-},0)
+// accumulator = starting number
+// current = currentValue => next item in array
+// 0 is the initial value
 
-console.log(sum)
+const sum = array.reduce(
+    (accumulator, current)=>{return accumulator + current
+})
 
+// a = 1, c = 6, => a = 7
+// a = 7 , c = -1
+
+/////////////////////////////////////////////
 /// Emptying Array // 
 let num = [1,2,3,4]
 let another = num; 
